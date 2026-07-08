@@ -30,6 +30,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Debug env          ← add here
+        run: |
+          echo "Email set: ${{ secrets.USER_EMAIL != '' }}"
+          echo "Password set: ${{ secrets.USER_PASSWORD != '' }}"
+
       - name: Run Playwright tests
         run: npx playwright test
 
