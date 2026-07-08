@@ -24,5 +24,5 @@ test.describe ('LoginPage', ()=>{
         await loginPage.login(email, password);
         await expect(page.getByTestId('nav-menu'), 'User menu should appear after login').toBeVisible();
         await expect(page.getByText('Sign in')).toBeHidden();
-    });
+    });//testing comments
 });
