@@ -1,7 +1,7 @@
 import { chromium, FullConfig } from '@playwright/test';
 
 async function globalSetup(config: FullConfig) {
-  const browser = await chromium.launch({ headless: false }); // ← headed so you can watch
+  const browser = await chromium.launch(); // ← headed so you can watch
   const page = await browser.newPage();
 
   await page.goto('https://practicesoftwaretesting.com/auth/login');
